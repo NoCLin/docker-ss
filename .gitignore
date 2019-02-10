@@ -1,0 +1,5 @@
+.DS_Store
+.idea
+/ssserver/shadowsocks.json
+/sslocal/ss-client.json
+/*/log

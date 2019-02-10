@@ -1,0 +1,14 @@
+version: '3.1'
+services:
+  ssserver:
+    container_name: sslocal
+    image: sslocal:latest
+    build:
+      context: ./
+    volumes:
+      - ./ss-client.json:/etc/ss-client.json:ro
+      - ./log:/var/log
+    ports:
+      - "1080:1080"
+      - "8118:8118"
+    restart: always

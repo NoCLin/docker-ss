@@ -1,0 +1,12 @@
+version: '3.1'
+services:
+  ssserver:
+    container_name: ssserver
+    image: ssserver:latest
+    build:
+      context: ./
+    volumes:
+      - ./shadowsocks.json:/etc/shadowsocks.json:ro
+    ports:
+      - "8388:8388"
+    restart: always
